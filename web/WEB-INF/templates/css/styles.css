@@ -1,3 +1,12 @@
+:root {
+    --header-grey: #EDEFF2;
+    --text-color: #4A586E;
+    --white: #FFFFFF;
+    --table-header-background: #E0E4EA;
+    --table-odd-row-background: #ECEEF2;
+    --table-even-row-background: #F8F9FA;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -8,7 +17,7 @@ body {
     height: 100px;
     width: 100%;
 
-    background: #EDEFF2;
+    background: var(--header-grey);
 }
 
 .header .arrow:hover {
@@ -24,7 +33,7 @@ body {
     font-weight: 600;
     font-size: 20px;
 
-    color: #4A586E;
+    color: var(--text-color);
 }
 
 .header .arrow-dot {
@@ -32,7 +41,7 @@ body {
     width: 30px;
     border-radius: 50%;
     margin: 35px 0 0 25%;
-    background: #FFFFFF;
+    background: var(--white);
     display: inline-block;
     text-align: center;
 }
@@ -58,8 +67,8 @@ body {
 
     display: table;
 
-    color: #4A586E;
-    background: #EDEFF2;
+    color: var(--text-color);
+    background: var(--header-grey);
 }
 
 .footer a {
@@ -73,7 +82,7 @@ body {
 }
 
 .text-anchor {
-    color: #4A586E;
+    color: var(--text-color);
     text-decoration: none;
 }
 
