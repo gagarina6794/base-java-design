@@ -2,6 +2,7 @@ table {
     width: 100%;
     border-spacing: 0;
     text-align: center;
+    box-shadow: 0 0 50px var(--table-shadow-color);
 }
 
 .table-wrapper {
@@ -30,23 +31,18 @@ table {
     margin-left: 13px;
     display: block;
 
-    color: var(--text-color);
+    color: var(--add-resume-text-color);
 }
 
-.resumes-list, .resumes-list-body {
+.resumes-list {
     width: 100%;
 }
 
-.resumes-list-body {
-    overflow: auto;
-    height: 320px;
-}
-
-.resumes-list-body img {
+.resumes-list img {
     height: 20px;
 }
 
-.resumes-list tr {
+.t-header, tr {
     font-family: Roboto, serif;
     font-style: normal;
     font-weight: bold;
@@ -55,26 +51,26 @@ table {
 
     height: 70px;
 
-    color: var(--text-color);
+    color: var(--table-header-text-color);
     background: var(--table-header-background);
 }
 
-.resumes-list-body tr {
+.t-body, tr {
     font-family: Open Sans, serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 19px;
 
-    color: var(--text-color);
+    color: var(--table-text-color);
 }
 
-.resumes-list-body tr:nth-child(odd) {
+.t-body, tr:nth-child(odd) {
     height: 70px;
     background: var(--table-odd-row-background);
 }
 
-.resumes-list-body tr:nth-child(even) {
+.t-body, tr:nth-child(even) {
     height: 90px;
     background: var(--table-even-row-background);
 }
@@ -87,11 +83,11 @@ table {
     border-top-right-radius: 10px;
 }
 
-.resumes-list-body tr:last-of-type td:first-of-type {
+.resumes-list tr:last-of-type td:first-of-type {
     border-bottom-left-radius: 10px;
 }
 
-.resumes-list-body tr:last-of-type td:last-of-type {
+.resumes-list tr:last-of-type td:last-of-type {
     border-bottom-right-radius: 10px;
 }
 
@@ -109,4 +105,14 @@ table {
 .img-column {
     width: 110px !important;
     min-width: 110px !important;
+}
+
+.text-table-anchor {
+    color: var(--table-anchor-color);
+    text-decoration: none;
+}
+
+.text-table-anchor:hover {
+    opacity: 0.8;
+    text-decoration: underline;
 }

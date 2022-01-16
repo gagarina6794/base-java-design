@@ -1,23 +1,15 @@
-:root {
-    --header-grey: #EDEFF2;
-    --text-color: #4A586E;
-    --white: #FFFFFF;
-    --table-header-background: #E0E4EA;
-    --table-odd-row-background: #ECEEF2;
-    --table-even-row-background: #F8F9FA;
-}
-
 body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background: var(--body-background);
 }
 
 .header {
     height: 100px;
     width: 100%;
 
-    background: var(--header-grey);
+    background: var(--header-background);
 }
 
 .header .arrow:hover {
@@ -33,7 +25,7 @@ body {
     font-weight: 600;
     font-size: 20px;
 
-    color: var(--text-color);
+    color: var(--header-text-color);
 }
 
 .header .arrow-dot {
@@ -41,7 +33,7 @@ body {
     width: 30px;
     border-radius: 50%;
     margin: 35px 0 0 25%;
-    background: var(--white);
+    background: var(--header-arrow-background);
     display: inline-block;
     text-align: center;
 }
@@ -67,8 +59,8 @@ body {
 
     display: table;
 
-    color: var(--text-color);
-    background: var(--header-grey);
+    color: var(--footer-text-color);
+    background: var(--header-background);
 }
 
 .footer a {
@@ -81,13 +73,20 @@ body {
     text-align: center;
 }
 
+.scrollable-panel {
+    height: calc(100vh - 200px);
+    width: 100%;
+    margin: 0;
+    overflow: auto;
+}
+
 .text-anchor {
-    color: var(--text-color);
     text-decoration: none;
 }
 
 .text-anchor:hover {
     opacity: 0.8;
+    color: var(--anchor-color);
     text-decoration: underline;
 }
 
@@ -97,4 +96,14 @@ body {
 
 .no-underline-anchor:hover {
     opacity: 0.8;
+}
+
+.footer-text-anchor {
+    color: var(--footer-anchor-color);
+    text-decoration: none;
+}
+
+.footer-text-anchor:hover {
+    opacity: 0.8;
+    text-decoration: underline;
 }
