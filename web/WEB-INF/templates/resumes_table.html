@@ -2,9 +2,9 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="css/theme/light.css">
+<!--    <link rel="stylesheet" href="css/theme/light.css">-->
 <!--        <link rel="stylesheet" href="css/theme/dark.css">-->
-<!--    <link rel="stylesheet" href="css/theme/purple.css">-->
+    <link rel="stylesheet" href="css/theme/purple.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/resume-list-styles.css">
     <title>Список всех резюме</title>
@@ -19,14 +19,31 @@
     <a class="text-anchor" href="#">
         <span class="resumes-control-title">Управление резюме</span>
     </a>
+    <div class="themes">
+        <form type="submit">
+            <div class="light-rectangle"></div>
+            <label for="light-theme">Светлая</label>
+            <input type="checkbox" id="light-theme"><br>
+
+            <div class="dark-rectangle"></div>
+            <label for="dark-theme">Темная</label>
+            <input type="checkbox" id="dark-theme"><br>
+
+            <div class="purple-rectangle"></div>
+            <label for="purple-theme">Фиолетовая</label>
+            <input type="checkbox" id="purple-theme"><br>
+
+            <button class="submit-theme-button" type="submit">Применить тему</button>
+        </form>
+    </div>
 </div>
 <div class="scrollable-panel">
 <div class="table-wrapper">
     <div class="add-resume">
         <a class="no-underline-anchor" href="#">
-            <img src="img/light/add-person.svg" alt="">
+<!--            <img src="img/light/add-person.svg" alt="">-->
 <!--            <img src="img/dark/add-person.svg" alt="">-->
-<!--            <img src="img/purple/add-person.svg" alt="">-->
+            <img src="img/purple/add-person.svg" alt="">
         </a>
         <a class="text-anchor" href="#">
             <p class="add-resume-title">Добавить резюме</p>
@@ -57,16 +74,16 @@
                 </td>
                 <td class="img-column">
                     <a class="no-underline-anchor" href="#">
-                        <img src="img/light/edit.svg" alt="">
+<!--                        <img src="img/light/edit.svg" alt="">-->
 <!--                        <img src="img/dark/edit.svg" alt="">-->
-<!--                        <img src="img/purple/edit.svg" alt="">-->
+                        <img src="img/purple/edit.svg" alt="">
                     </a>
                 </td>
                 <td class="img-column">
                     <a class="no-underline-anchor" href="#">
-                        <img src="img/light/remove.svg" alt="">
+<!--                        <img src="img/light/remove.svg" alt="">-->
 <!--                        <img src="img/dark/remove.svg" alt="">-->
-<!--                        <img src="img/purple/remove.svg" alt="">-->
+                        <img src="img/purple/remove.svg" alt="">
                     </a>
                 </td>
             </tr>
