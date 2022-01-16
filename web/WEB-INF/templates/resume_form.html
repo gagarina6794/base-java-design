@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/edit-resume-styles.css">
+    <script src="js/script.js"></script>
+    <title>Редактирование резюме</title>
+</head>
+<body>
+<div class="header">
+    <a class="no-underline-anchor" href="#">
+        <div class="arrow-dot">
+            <img src="img/left_arrow.svg" alt="">
+        </div>
+    </a>
+    <a class="text-anchor" href="#">
+        <span class="resumes-control-title">Управление резюме</span>
+    </a>
+</div>
+<form action="">
+    <div class="scrollable-panel">
+        <div class="form-wrapper">
+            <div class="section">ФИО</div>
+            <input class="field" type="text" placeholder="ФИО">
+
+            <div class="section">Контакты</div>
+            <input class="field" type="text" placeholder="Moбильный">
+            <input class="field" type="text" placeholder="Домашний тел.">
+            <input class="field" type="text" placeholder="Skype">
+            <input class="field" type="text" placeholder="Почта">
+            <input class="field" type="text" placeholder="Профиль LinkedIn">
+            <input class="field" type="text" placeholder="Профиль GitHub">
+            <input class="field" type="text" placeholder="Профиль Stackoverflow">
+            <input class="field" type="text" placeholder="Домашняя страница">
+
+            <div class="spacer"></div>
+
+            <div class="section">Секции</div>
+
+            <div class="field-label">Личные качества</div>
+            <textarea class="field"></textarea>
+            <div class="field-label">Позиция</div>
+            <textarea class="field"></textarea>
+            <div class="field-label">Достижения</div>
+            <textarea class="field"></textarea>
+            <div class="field-label">Квалификация</div>
+            <textarea class="field"></textarea>
+
+            <div class="field-label">Опыт работы</div>
+
+            <button class="green-button">Добавить</button>
+            <input class="field" type="text" placeholder="Название">
+            <input class="field" type="text" placeholder="Ссылка">
+
+            <button class="small-green-button">Добавить должность</button>
+
+            <div class="date-section">
+
+                <input class="field date" type="text" id="startDateText"
+                       onfocus="showDateField('startDateText', 'startDate')"
+                       placeholder="Начало работы, ДД.ММ.ГГГГ">
+                <input class="field date" type="date" id="startDate" hidden
+                       onblur="hideDateField('startDateText', 'startDate')">
+
+                <input class="field date date-margin" type="text" id="endDateText"
+                       onfocus="showDateField('endDateText', 'endDate')"
+                       placeholder="Окончание, ДД.ММ.ГГГГ">
+                <input class="field date date-margin" type="date" id="endDate" hidden
+                       onblur="hideDateField('endDateText', 'endDate')">
+            </div>
+
+            <input class="field" type="text" placeholder="Заголовок">
+            <textarea class="field" placeholder="Описание"></textarea>
+
+            <div class="field-label">Образование</div>
+
+            <button class="green-button">Добавить</button>
+            <input class="field" type="text" placeholder="Название">
+            <input class="field" type="text" placeholder="Ссылка">
+
+            <button class="small-green-button">Добавить позицию</button>
+
+            <div class="date-section">
+
+                <input class="field date" type="text" id="startEducationDateText"
+                       onfocus="showDateField('startEducationDateText', 'startEducationDate')"
+                       placeholder="Начало учёбы, ДД.ММ.ГГГГ">
+                <input class="field date" type="date" id="startEducationDate" hidden
+                       onblur="hideDateField('startEducationDateText', 'startEducationDate')">
+
+                <input class="field date date-margin" type="text" id="endEducationDateText"
+                       onfocus="showDateField('endEducationDateText', 'endEducationDate')"
+                       placeholder="Окончание, ДД.ММ.ГГГГ">
+                <input class="field date date-margin" type="date" id="endEducationDate" hidden
+                       onblur="hideDateField('endEducationDateText', 'endEducationDate')">
+            </div>
+
+            <input class="field" type="text" placeholder="Заголовок">
+            <textarea class="field" placeholder="Описание"></textarea>
+
+            <div class="spacer"></div>
+
+            <div class="button-section">
+                <button class="red-cancel-button">Отменить</button>
+                <button class="green-submit-button">Сохранить</button>
+            </div>
+
+        </div>
+    </div>
+</form>
+<div class="footer">
+    <a class="text-anchor" href="#">
+        <div>Проект: разработка web-приложения «База данных резюме»</div>
+    </a>
+</div>
+</body>
+</html>
