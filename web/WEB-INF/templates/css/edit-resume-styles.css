@@ -156,13 +156,13 @@ button {
 
     color: var(--button-text-color);
 
-    border: 2px solid var(--submit-button-color);
-    background: var(--submit-button-color);
+    border: 2px solid var(--save-button-background);
+    background: var(--save-button-background);
 }
 
 .green-submit-button:hover {
-    color: var(--submit-button-color);
+    color: var(--save-button-background);
     opacity: 0.8;
-    box-shadow: 0 0 10px var(--submit-button-color);
+    box-shadow: 0 0 10px var(--save-button-background);
     background: var(--button-text-color);
 }
