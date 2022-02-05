@@ -35,6 +35,10 @@
     opacity: 0.8;
 }
 
+.section-wrapper {
+    margin-bottom: 83px;
+}
+
 .contact-link:active {
     color: var(--contact-link-color);
 }
@@ -103,12 +107,7 @@
     font-weight: 300;
     font-size: 18px;
     line-height: 25px;
-    margin: 35px 0 83px 207px;
-}
-
-.period-education {
-    display: flex;
-    margin: 10px 0 83px 0;
+    margin: 35px 0 0 207px;
 }
 
 .footer-spacer {
