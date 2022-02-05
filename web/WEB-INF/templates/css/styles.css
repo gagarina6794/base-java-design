@@ -109,78 +109,30 @@ body {
 }
 
 .themes {
-    height: 100px;
-    width: 200px;
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+
     float: right;
-    display: block;
-    margin: 5px -20px 0 0;
+    display: flex;
+    margin: 40px 24px 0 0;
 
     color: var(--theme-text-color);
 }
 
-#light-theme {
-    width: 108px;
+.theme-title {
+    width: 45px;
 }
 
-#dark-theme {
-    width: 118px;
-}
-#purple-theme {
-    width: 56px;
+.theme-selector option {
+    color: var(--table-header-background);
+    background: var(--table-header-text-color);
 }
 
-.light-rectangle {
-    height: 15px;
-    width: 15px;
-    display: inline-block;
-    background: #E0E4EA;
-    border: 1px solid #FFFFFF;
-    border-radius: 3px;
-}
-
-.dark-rectangle {
-    height: 15px;
-    width: 15px;
-    display: inline-block;
-    background: #1A2026;
-    border: 1px solid #FFFFFF;
-    border-radius: 3px;
-}
-
-.purple-rectangle {
-    height: 15px;
-    width: 15px;
-    display: inline-block;
-    background: #6129BD;
-    border: 1px solid #FFFFFF;
-    border-radius: 3px;
-}
-
-.submit-theme-button {
-    font-family: Open Sans, serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 19px;
-
-    align-items: center;
-
-    height: 25px;
-    width: 150px;
-    margin: 5px 0 0 0;
-
-    box-sizing: border-box;
-    border-radius: 5px;
-
-    display: block;
-
-    color: #4A586E;
-
-    border: 1px solid #4A586E;
-    background: #FFFFFF;
-}
-
-.submit-theme-button:hover {
-    opacity: 0.8;
-    box-shadow: 0 0 10px #FFFFFF;
+.theme-selector select {
+    color: var(--table-header-text-color);
+    background: var(--table-header-background);
+    border: none;
 }
