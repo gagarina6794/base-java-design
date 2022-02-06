@@ -39,6 +39,11 @@ public class ResumeServlet extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         String uuid = request.getParameter("uuid");
         String fullName = request.getParameter("fullName");
+        String theme = request.getParameter("theme");
+
+        if (!themes.contains(theme)) {
+            theme = LIGHT_THEME;
+        }
 
         final boolean isCreate = (uuid == null || uuid.length() == 0);
         Resume r;
@@ -103,7 +108,7 @@ public class ResumeServlet extends HttpServlet {
         } else {
             storage.update(r);
         }
-        response.sendRedirect("resume");
+        response.sendRedirect("resume?theme=" + theme);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws javax.servlet.ServletException, IOException {

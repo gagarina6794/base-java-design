@@ -11,6 +11,18 @@
     <title>Список всех резюме</title>
 </head>
 <body>
+<div class="themes">
+    <div class="theme-title">Тема</div>
+    <div class="theme-selector">
+        <form action="" method="GET">
+            <select name="theme" onchange="this.form.submit()">
+                <option value="light" ${theme == null || theme == 'light' ? 'selected' : ''}>Светлая</option>
+                <option value="dark" ${theme == 'dark' ? 'selected' : ''}>Темная</option>
+                <option value="purple" ${theme == 'purple' ? 'selected' : ''}>Фиолетовая</option>
+            </select>
+        </form>
+    </div>
+</div>
 <jsp:include page="fragments/header.jsp"/>
 <div class="scrollable-panel">
     <div class="table-wrapper">

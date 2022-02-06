@@ -18,6 +18,7 @@
 <jsp:include page="fragments/header.jsp"/>
 <form method="post" action="resume" enctype="application/x-www-form-urlencoded">
     <input type="hidden" name="uuid" value="${resume.uuid}">
+    <input type="hidden" name="theme" value="${theme}">
     <div class="scrollable-panel">
         <div class="form-wrapper">
             <div class="section">ФИО</div>
