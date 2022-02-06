@@ -15,6 +15,11 @@ public enum ContactType {
         public String toHtml0(String value) {
             return getTitle() + ": " + toLink("mailto:" + value, value);
         }
+
+        @Override
+        public String getHref(String value) {
+            return getHref("mailto:", value);
+        }
     },
     LINKEDIN("Профиль LinkedIn") {
         @Override
@@ -64,6 +69,14 @@ public enum ContactType {
     }
 
     public static String toLink(String href, String title) {
-        return "<a href='" + href + "'>" + title + "</a>";
+        return "<a class=\"contact-link\" href='" + href + "'>" + title + "</a>";
+    }
+
+    public String getHref(String value) {
+        return value;
+    }
+
+    public static String getHref(String prefix, String value) {
+        return prefix + value;
     }
 }

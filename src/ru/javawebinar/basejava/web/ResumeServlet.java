@@ -13,16 +13,26 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class ResumeServlet extends HttpServlet {
 
+    private static final String DARK_THEME = "dark";
+    private static final String LIGHT_THEME = "light";
+    private static final String PURPLE_THEME = "purple";
+
     private Storage storage; // = Config.get().getStorage();
+    private final Set<String> themes = new HashSet<>();
 
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
         storage = Config.get().getStorage();
+        themes.add(DARK_THEME);
+        themes.add(LIGHT_THEME);
+        themes.add(PURPLE_THEME);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws javax.servlet.ServletException, IOException {
@@ -99,6 +109,14 @@ public class ResumeServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         String uuid = request.getParameter("uuid");
         String action = request.getParameter("action");
+        String theme = request.getParameter("theme");
+
+        if (!themes.contains(theme)) {
+            theme = LIGHT_THEME;
+        }
+
+        request.setAttribute("theme", theme);
+
         if (action == null) {
             request.setAttribute("resumes", storage.getAllSorted());
             request.getRequestDispatcher("/WEB-INF/jsp/list.jsp").forward(request, response);

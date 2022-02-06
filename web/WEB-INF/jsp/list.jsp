@@ -5,32 +5,61 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme/${theme}.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/resume-list-styles.css">
     <title>Список всех резюме</title>
 </head>
 <body>
 <jsp:include page="fragments/header.jsp"/>
-<section>
-    <a href="resume?action=add"><img src="img/add.png"></a>
-    <br>
-    <table border="1" cellpadding="8" cellspacing="0" style="margin: auto">
-        <tr>
-            <th>Имя</th>
-            <th>Email</th>
-            <th></th>
-            <th></th>
-        </tr>
-        <c:forEach items="${resumes}" var="resume">
-            <jsp:useBean id="resume" type="ru.javawebinar.basejava.model.Resume"/>
-            <tr>
-                <td><a href="resume?uuid=${resume.uuid}&action=view">${resume.fullName}</a></td>
-                <td><%=ContactType.MAIL.toHtml(resume.getContact(ContactType.MAIL))%></td>
-                <td><a href="resume?uuid=${resume.uuid}&action=delete"><img src="img/delete.png"></a></td>
-                <td><a href="resume?uuid=${resume.uuid}&action=edit"><img src="img/pencil.png"></a></td>
-            </tr>
-        </c:forEach>
-    </table>
-</section>
+<div class="scrollable-panel">
+    <div class="table-wrapper">
+        <div class="add-resume">
+            <a class="no-underline-anchor" href="resume?action=add&theme=${theme}">
+                <img src="img/${theme}/add-person.svg" alt="">
+            </a>
+            <a class="text-anchor" href="resume?action=add&theme=${theme}">
+                <p class="add-resume-title">Добавить резюме</p>
+            </a>
+        </div>
+        <div class="resumes-list">
+            <table>
+                <tr class="t-header">
+                    <th class="name-column">Имя</th>
+                    <th class="info-column">Контакты</th>
+                    <th class="img-column">Редактировать</th>
+                    <th class="img-column">Удалить</th>
+                </tr>
+                <c:forEach items="${resumes}" var="resume">
+                    <jsp:useBean id="resume" type="ru.javawebinar.basejava.model.Resume"/>
+                    <tr class="t-body">
+                        <td class="name-column">
+                            <a class="text-table-anchor"
+                               href="resume?uuid=${resume.uuid}&action=view&theme=${theme}">${resume.fullName.replace(" ", "</br>")}</a>
+                        </td>
+                        <td class="info-column">
+                            <a class="text-table-anchor" href="<%=ContactType.MAIL.getHref(resume.getContact(ContactType.MAIL))%>">
+                                    ${resume.getContact(ContactType.MAIL)}
+                                <br>
+                                    ${resume.getContact(ContactType.MOBILE)}
+                            </a>
+                        </td>
+                        <td class="img-column">
+                            <a class="no-underline-anchor" href="resume?uuid=${resume.uuid}&action=edit&theme=${theme}">
+                                <img src="img/${theme}/edit.svg" alt="">
+                            </a>
+                        </td>
+                        <td class="img-column">
+                            <a class="no-underline-anchor" href="resume?uuid=${resume.uuid}&action=delete&theme=${theme}">
+                                <img src="img/${theme}/remove.svg" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </div>
+    </div>
+</div>
 <jsp:include page="fragments/footer.jsp"/>
 </body>
 </html>
